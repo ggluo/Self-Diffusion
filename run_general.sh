@@ -1,0 +1,3 @@
+python general.py --task SR --data misc/ILSVRC2012_val_00001185.jpeg  --size 256 --scale 4 --logdir=results/imagenet_sr --progressive_params=stages=1,factor=1 --learning_rate 0.001 --iter 150 --wavelet_l1_weight 0.0 --tv_weight 0.0 --steps 40 --schedule_params ddpm:beta_start=0.0001,beta_end=0.01 --verbose
+
+python general.py --task Inpainting --data misc/ILSVRC2012_val_00001185.JPEG  --size 256 --logdir=results/imagenet_inpainting --progressive_params=stages=1,factor=1 --learning_rate 0.001 --iter 150 --wavelet_l1_weight 0.0 --tv_weight 0.0 --steps 40 --schedule_params ddpm:beta_start=0.0001,beta_end=0.01 --verbose
