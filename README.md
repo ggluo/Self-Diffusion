@@ -1,12 +1,14 @@
 # Self-diffusion for Solving Inverse Problems
 
-**NeurIPS 2025** | [OpenReview](https://openreview.net/forum?id=5g9qls1V7Q) | [PDF](https://openreview.net/pdf?id=5g9qls1V7Q)
+**NeurIPS 2025** | [OpenReview](https://openreview.net/forum?id=5g9qls1V7Q) | [PDF]([https://openreview.net/pdf?id=5g9qls1V7Q](https://arxiv.org/pdf/2510.21417))
 
-**Authors**: Guanxiong Luo, Shoujin Huang
+**Authors**: Guanxiong Luo, Shoujin Huang, Yanlong Yang
 
 **TL;DR**: Self-diffusion solves inverse problems without the need of pretrained generative models via a self-contained iterative process that alternates between noising and denoising steps to progressively refine its estimate of the solution.
 
 **Keywords**: inverse problems, computational imaging, image reconstruction, diffusion models
+
+![overview](https://arxiv.org/html/2510.21417v1/figs/1.png)
 
 This repository contains the implementation of Self-diffusion for solving inverse problems. The code is organized as follows:
 
@@ -44,6 +46,19 @@ If you use this code or find the paper useful, please cite:
   booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
   year={2025},
   url={https://openreview.net/forum?id=5g9qls1V7Q}
+}
+```
+or
+
+```
+@article{luo2025selfdiffusionsolvinginverseproblems,
+      title={Self-diffusion for Solving Inverse Problems}, 
+      author={Guanxiong Luo and Shoujin Huang and Yanlong Yang},
+      year={2025},
+      eprint={2510.21417},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2510.21417}
 }
 ```
 
