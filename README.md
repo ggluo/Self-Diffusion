@@ -51,14 +51,15 @@ If you use this code or find the paper useful, please cite:
 or
 
 ```
-@article{luo2025selfdiffusionsolvinginverseproblems,
-      title={Self-diffusion for Solving Inverse Problems}, 
-      author={Guanxiong Luo and Shoujin Huang and Yanlong Yang},
-      year={2025},
-      eprint={2510.21417},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2510.21417}
+@article{
+  luo2025selfdiffusionsolvinginverseproblems,
+  title={Self-diffusion for Solving Inverse Problems}, 
+  author={Guanxiong Luo and Shoujin Huang and Yanlong Yang},
+  year={2025},
+  eprint={2510.21417},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2510.21417}
 }
 ```
 
