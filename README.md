@@ -8,12 +8,6 @@
 
 **Keywords**: inverse problems, computational imaging, image reconstruction, diffusion models
 
-## Overview
-
-We propose ***self-diffusion***, a novel framework for solving inverse problems without relying on pretrained generative models. Traditional diffusion-based approaches require training a model on a clean dataset to learn to reverse the forward noising process. This model is then used to sample clean solutions---corresponding to posterior sampling from a Bayesian perspective---that are consistent with the observed data under a specific task. In contrast, self-diffusion introduces a self-contained iterative process that alternates between noising and denoising steps to progressively refine its estimate of the solution. At each step of self-diffusion, noise is added to the current estimate, and a self-denoiser, which is a single untrained convolutional network randomly initialized from scratch, is continuously trained for certain iterations via a data fidelity loss to predict the solution from the noisy estimate. Essentially, self-diffusion exploits the spectral bias of neural networks and modulates it through a scheduled noise process. Without relying on pretrained score functions or external denoisers, this approach still remains adaptive to arbitrary forward operators and noisy observations, making it highly flexible and broadly applicable. We demonstrate the effectiveness of our approach on a variety of linear inverse problems, showing that self-diffusion achieves competitive or superior performance compared to other methods.
-
-## Repository
-
 This repository contains the implementation of Self-diffusion for solving inverse problems. The code is organized as follows:
 
 - `sdi.py`: Main implementation of the Self-diffusion algorithm.
