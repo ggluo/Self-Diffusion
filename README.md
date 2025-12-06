@@ -1,3 +1,62 @@
-[Self-diffusion for solving inverse problems](https://neurips.cc/virtual/2025/poster/119840)
+# Self-diffusion for Solving Inverse Problems
 
-The code is coming soon!
+**NeurIPS 2025** | [OpenReview](https://openreview.net/forum?id=5g9qls1V7Q) | [PDF](https://openreview.net/pdf?id=5g9qls1V7Q)
+
+**Authors**: Guanxiong Luo, Shoujin Huang
+
+**TL;DR**: Self-diffusion solves inverse problems without the need of pretrained generative models via a self-contained iterative process that alternates between noising and denoising steps to progressively refine its estimate of the solution.
+
+**Keywords**: inverse problems, computational imaging, image reconstruction, diffusion models
+
+## Overview
+
+We propose ***self-diffusion***, a novel framework for solving inverse problems without relying on pretrained generative models. Traditional diffusion-based approaches require training a model on a clean dataset to learn to reverse the forward noising process. This model is then used to sample clean solutions---corresponding to posterior sampling from a Bayesian perspective---that are consistent with the observed data under a specific task. In contrast, self-diffusion introduces a self-contained iterative process that alternates between noising and denoising steps to progressively refine its estimate of the solution. At each step of self-diffusion, noise is added to the current estimate, and a self-denoiser, which is a single untrained convolutional network randomly initialized from scratch, is continuously trained for certain iterations via a data fidelity loss to predict the solution from the noisy estimate. Essentially, self-diffusion exploits the spectral bias of neural networks and modulates it through a scheduled noise process. Without relying on pretrained score functions or external denoisers, this approach still remains adaptive to arbitrary forward operators and noisy observations, making it highly flexible and broadly applicable. We demonstrate the effectiveness of our approach on a variety of linear inverse problems, showing that self-diffusion achieves competitive or superior performance compared to other methods.
+
+## Repository
+
+This repository contains the implementation of Self-diffusion for solving inverse problems. The code is organized as follows:
+
+- `sdi.py`: Main implementation of the Self-diffusion algorithm.
+- `denoise.py`: Denoising network and training utilities.
+- `utils.py`: Helper functions for data loading and processing.
+- `simulation.py`: Simulation scripts for generating synthetic data.
+- `run_*.sh`: Bash scripts to run experiments on different tasks (MRI, general inverse problems, hyperparameter tuning, etc.).
+- `net/`: Neural network architectures (UNet, extra deep UNet, etc.).
+- `misc/`: Miscellaneous files including sample data and images.
+
+## Quick Start
+
+To run Self-diffusion on a sample inverse problem (e.g., MRI reconstruction), use:
+
+```bash
+./run_mri.sh
+```
+
+Or for a general inverse problem:
+
+```bash
+./run_general.sh
+```
+
+## Citation
+
+If you use this code or find the paper useful, please cite:
+
+```bibtex
+@inproceedings{
+  luo2025selfdiffusion,
+  title={Self-diffusion for Solving Inverse Problems},
+  author={Guanxiong Luo and Shoujin Huang},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025},
+  url={https://openreview.net/forum?id=5g9qls1V7Q}
+}
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For questions, please contact the authors via OpenReview or open an issue in this repository.
