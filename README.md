@@ -1,6 +1,6 @@
 # Self-diffusion for Solving Inverse Problems
 
-**NeurIPS 2025** | [OpenReview](https://openreview.net/forum?id=5g9qls1V7Q) | [PDF]([https://openreview.net/pdf?id=5g9qls1V7Q](https://arxiv.org/pdf/2510.21417))
+**NeurIPS 2025** | [OpenReview](https://openreview.net/forum?id=5g9qls1V7Q) | [PDF](https://arxiv.org/pdf/2510.21417)
 
 **Authors**: Guanxiong Luo, Shoujin Huang, Yanlong Yang
 
